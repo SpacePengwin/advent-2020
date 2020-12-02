@@ -11,6 +11,7 @@ int day_one(bool part_two) {
 	while(fscanf(file, "%d", &n) > 0) { // Read input file and save to array.
 		nums[i++] = n;
 	}
+	fclose(file);
 	for (int i = 0; i < count; ++i) // Iterate through list initially, captures first int in nums[i]
 	{
 		for (int n = 0; n < count; ++n) // Captures second int in nums[n]
@@ -37,7 +38,7 @@ int day_one(bool part_two) {
 
 int main() {
 	int day1;
-	day1 = day_one(true);
+	day1 = day_one(false);
 	printf("Value is: %d\n", day1);
 	return 0;
 
